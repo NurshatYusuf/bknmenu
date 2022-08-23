@@ -18,7 +18,7 @@ const MainRoutes = () => {
             id: 2
         },
         {
-            link: "/dishes",
+            link: "/menu",
             element: <DishesPage />,
             id: 3
         },

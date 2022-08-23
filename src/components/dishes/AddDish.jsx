@@ -35,7 +35,7 @@ const AddDish = () => {
             <input type="text" name="price" placeholder="Price" onChange={handleInp} />
             <button onClick={() => {
                 addDishes(dish);
-                navigate("/");
+                navigate("/menu");
             }}>Add Dish</button>
         </div>
     );

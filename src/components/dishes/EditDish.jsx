@@ -44,7 +44,7 @@ const EditDish = () => {
                     <input type="text" value={dish.price} placeholder="Price" name="price" onChange={handleInp} />
                     <button onClick={() => {
                         saveEditedDishes(dish);
-                        navigate("/dishes");
+                        navigate("/menu");
                     }}>Save Changes</button>
                 </div>
                 ) : (
