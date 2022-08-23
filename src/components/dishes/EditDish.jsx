@@ -37,17 +37,17 @@ const EditDish = () => {
 
     return (
         <>
-            {dish ? (dish.map(item => (
+            {dish ? (
                 <div>
-                    <input type="text" value={item.name} placeholder="Name" name="name" onChange={handleInp} />
-                    <input type="text" value={item.description} placeholder="Description" name="description" onChange={handleInp} />
-                    <input type="text" value={item.price} placeholder="Price" name="price" onChange={handleInp} />
+                    <input type="text" value={dish.name} placeholder="Name" name="name" onChange={handleInp} />
+                    <input type="text" value={dish.description} placeholder="Description" name="description" onChange={handleInp} />
+                    <input type="text" value={dish.price} placeholder="Price" name="price" onChange={handleInp} />
                     <button onClick={() => {
                         saveEditedDishes(dish);
                         navigate("/dishes");
                     }}>Save Changes</button>
                 </div>
-                ))) : (
+                ) : (
                 <h3>Loading...</h3>
             )}
         </>

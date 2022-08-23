@@ -1,14 +1,8 @@
 {
   "dishes": [
     {
-      "name": "Салат",
-      "description": "Вкусный",
-      "price": "500",
-      "id": 1
-    },
-    {
       "name": "Пельмени",
-      "description": "Жареный",
+      "description": "Жареный и твердые",
       "price": "1500",
       "id": 2
     },

@@ -17,7 +17,7 @@ const reducer = (state=INIT_STATE, action) => {
         case ACTIONS.GET_DISHES:
             return {...state, dishes: action.payload};
         case ACTIONS.GET_DISHES_DETAILS:
-            return {...state, dishes: action.payload};
+            return {...state, dishesDetails: action.payload};
         default:
             return state;
     }
