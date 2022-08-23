@@ -1,7 +1,7 @@
 import React from "react";
 import EditDish from "../components/dishes/EditDish";
 
-const EditPage = () => {
+const EditDishesPage = () => {
     return (
         <div>
             <EditDish />
@@ -9,4 +9,4 @@ const EditPage = () => {
     )
 };
 
-export default EditPage;
+export default EditDishesPage;
