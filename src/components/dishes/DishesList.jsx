@@ -3,7 +3,7 @@ import { useDishes } from "../../contexts/DishesContextProvider";
 import {useNavigate, useSearchParams} from "react-router-dom";
 
 const DishesList = () => {
-    const { dishes, getDishes } = useDishes();
+    const { dishes, getDishes, deleteDishes } = useDishes();
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -30,6 +30,7 @@ const DishesList = () => {
                 <h3>
                     {item.name}, {item.description}, {item.price}
                     <button onClick={() => navigate(`/edit/${item.id}`)}>Edit</button>
+                    <button onClick={() => deleteDishes(item.id)}>Delete</button>
                 </h3>
             ))) : (
                 <h3>Loading...</h3>
