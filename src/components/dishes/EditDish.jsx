@@ -4,8 +4,11 @@ import { useNavigate, useParams } from "react-router-dom";
 
 const EditDish = () => {
     const { getDishesDetails, dishesDetails, saveEditedDishes } = useDishes();
+
     const navigate = useNavigate();
+
     const { id } = useParams();
+
     const [dish, setDish] = useState(dishesDetails);
 
     useEffect(() => {
@@ -20,13 +23,13 @@ const EditDish = () => {
         if (e.target.name === "price") {
             let obj = {
                 ...dish,
-                [e.target.name]: Number(e.target.value)
+                [e.target.name]: Number(e.target.value),
             };
             setDish(obj);
-        }  else {
+        } else {
             let obj = {
                 ...dish,
-                [e.target.name]: e.target.value
+                [e.target.name]: e.target.value,
             };
             setDish(obj);
         }
@@ -34,17 +37,17 @@ const EditDish = () => {
 
     return (
         <>
-            {dish ? (
+            {dish ? (dish.map(item => (
                 <div>
-                    <input type="text" value={dish.name} name="name" placeholder="Name" onChange={handleInp} />
-                    <input type="text" value={dish.description} name="description" placeholder="Description" onChange={handleInp} />
-                    <input type="text" value={dish.price} name="price" placeholder="Price" onChange={handleInp} />
+                    <input type="text" value={item.name} placeholder="Name" name="name" onChange={handleInp} />
+                    <input type="text" value={item.description} placeholder="Description" name="description" onChange={handleInp} />
+                    <input type="text" value={item.price} placeholder="Price" name="price" onChange={handleInp} />
                     <button onClick={() => {
                         saveEditedDishes(dish);
-                        navigate("/");
+                        navigate("/dishes");
                     }}>Save Changes</button>
                 </div>
-            ) : (
+                ))) : (
                 <h3>Loading...</h3>
             )}
         </>
