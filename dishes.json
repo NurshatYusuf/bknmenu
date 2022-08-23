@@ -1,0 +1,22 @@
+{
+  "dishes": [
+    {
+      "name": "Салат",
+      "description": "Вкусный",
+      "price": "500",
+      "id": 1
+    },
+    {
+      "name": "Пельмени",
+      "description": "Жареный",
+      "price": "1500",
+      "id": 2
+    },
+    {
+      "name": "Стейк",
+      "description": "Большой",
+      "price": "5000",
+      "id": 3
+    }
+  ]
+}
