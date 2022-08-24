@@ -1,16 +1,22 @@
 {
   "dishes": [
     {
-      "name": "Пельмени",
-      "description": "Жареный и твердые",
-      "price": "1500",
-      "id": 2
-    },
-    {
-      "name": "Стейк",
-      "description": "Большой",
+      "name": "Stake",
+      "description": "Very spicy",
       "price": "5000",
       "id": 3
+    },
+    {
+      "name": "Soup",
+      "description": "Delicious",
+      "price": "100",
+      "id": 4
+    },
+    {
+      "name": "Chiken",
+      "description": "Tasty",
+      "price": "100",
+      "id": 5
     }
   ]
 }

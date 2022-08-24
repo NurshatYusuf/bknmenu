@@ -1,42 +1,64 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import { useDishes } from "../../contexts/DishesContextProvider";
-import {useNavigate, useSearchParams} from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import DishCard from "./DishCard";
+import AOS from "aos";
+
+import "../../styles/DishesList.css";
 
 const DishesList = () => {
-    const { dishes, getDishes, deleteDishes } = useDishes();
-    const navigate = useNavigate();
+  const { dishes, getDishes, deleteDishes } = useDishes();
+  const navigate = useNavigate();
 
-    useEffect(() => {
-        getDishes();
-    }, []);
+  useEffect(() => {
+    getDishes();
+  }, []);
 
-    const [searchParams, setSearchParams] = useSearchParams();
-    const [search, setSearch] = useState(searchParams.get("q") || "");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [search, setSearch] = useState(searchParams.get("q") || "");
 
-    useEffect(() => {
-        setSearchParams({
-            q: search
-        });
-    }, [ search, ]);
+  useEffect(() => {
+    setSearchParams({
+      q: search,
+    });
+  }, [search]);
 
-    useEffect(() => {
-        getDishes();
-    }, [ searchParams, ]);
+  useEffect(() => {
+    getDishes();
+  }, [searchParams]);
 
-    return (
-        <div>
-            <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search..." />
-            {dishes ? (dishes.map(item => (
-                <h3>
-                    {item.name}, {item.description}, {item.price}
-                    <button onClick={() => navigate(`/edit/${item.id}`)}>Edit</button>
-                    <button onClick={() => deleteDishes(item.id)}>Delete</button>
-                </h3>
-            ))) : (
-                <h3>Loading...</h3>
-            )}
-        </div>
-    );
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
+  return (
+    <div className="list-container" data-aos="fade-up" data-aos-duration="2000">
+      <div className="list__title">
+        <h1>PLATOS DELICIOS</h1>
+      </div>
+      <div className="list-content__top">
+        <input
+          type="text"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          placeholder="Search..."
+          className="dish-list__inp"
+        />
+        <button className="d-list__btn" onClick={() => navigate("/add")}>
+          Add Dish
+        </button>
+      </div>
+      <div className="dishes-list">
+        {dishes ? (
+          dishes.map((item) => <DishCard item={item} />)
+        ) : (
+          <h3>Loading...</h3>
+        )}
+      </div>
+    </div>
+  );
 };
 
 export default DishesList;
