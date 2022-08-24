@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "userName": "Nur",
+      "name": "Nurshat",
+      "lastName": "Yusuf",
+      "password": "123",
+      "isLogin": false,
+      "id": 1
+    },
+    {
+      "userName": "zuhkra",
+      "name": "zukhra",
+      "lastName": "shuhrat",
+      "password": "321",
+      "isLogin": false,
+      "id": 2
+    },
+    {
+      "userName": "Beka",
+      "name": "Bekturgan",
+      "lastName": "Abdykadyrov",
+      "password": "4321",
+      "isLogin": true,
+      "id": 3
+    }
+  ]
+}
