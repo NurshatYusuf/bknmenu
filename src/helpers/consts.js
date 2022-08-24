@@ -3,4 +3,4 @@ export const ACTIONS = {
   GET_DISHES_DETAILS: "GET_DISHES_DETAILS",
 };
 
-export const JSON_API_DISHES = "http://localhost:8001/dishes";
+export const JSON_API_DISHES = "http://localhost:8000/dishes";
