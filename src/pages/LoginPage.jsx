@@ -32,7 +32,7 @@ const LoginPage = () => {
       <button onClick={() => loginUser()}>Login</button>
 
       {/* {isLogin.isLogin === true ? ( */}
-      <button onClick={logOut}> LogOUT</button>
+      <button onClick={() => logOut(userName)}> LogOUT</button>
       {/* ) : (
         <></>
       )}

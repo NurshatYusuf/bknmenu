@@ -1,14 +1,20 @@
 import React from "react";
+import MainRoutes from "./MainRoutes";
+import DishesContextProvider from "./contexts/DishesContextProvider";
+import Navbar from "./components/Navbar/Navbar";
+import "./styles/index.css";
 import UsersContextProvider from "./contexts/userContext";
-import RegistrationPage from "./pages/RegistrationPage";
-import LoginPage from "./pages/LoginPage";
 
 function App() {
   return (
-    <UsersContextProvider>
-      <RegistrationPage />
-      <LoginPage />
-    </UsersContextProvider>
+    <>
+      <UsersContextProvider>
+        <DishesContextProvider>
+          <Navbar />
+          <MainRoutes />
+        </DishesContextProvider>
+      </UsersContextProvider>
+    </>
   );
 }
 

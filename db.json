@@ -5,7 +5,7 @@
       "name": "Nurshat",
       "lastName": "Yusuf",
       "password": "123",
-      "isLogin": false,
+      "isLogin": true,
       "id": 1
     },
     {
@@ -15,14 +15,26 @@
       "password": "321",
       "isLogin": false,
       "id": 2
+    }
+  ],
+  "dishes": [
+    {
+      "name": "Stake",
+      "description": "Very spicy",
+      "price": "5000",
+      "id": 3
     },
     {
-      "userName": "Beka",
-      "name": "Bekturgan",
-      "lastName": "Abdykadyrov",
-      "password": "4321",
-      "isLogin": true,
-      "id": 3
+      "name": "Soup",
+      "description": "Delicious",
+      "price": "100",
+      "id": 4
+    },
+    {
+      "name": "Chiken",
+      "description": "Tasty",
+      "price": "100",
+      "id": 5
     }
   ]
 }
