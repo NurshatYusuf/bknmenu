@@ -3,9 +3,9 @@ import React from 'react';
 const CartPage = () => {
     return (
         <div>
-            <h3>Корзина</h3>
+            <h1>Корзина</h1>
         </div>
     )
 }
 
-export default CartPage
+export default CartPage;
