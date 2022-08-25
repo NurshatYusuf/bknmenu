@@ -8,6 +8,7 @@ import LoginPage from "./pages/LoginPage";
 import RegistrationPage from "./pages/RegistrationPage";
 
 const MainRoutes = () => {
+<<<<<<< HEAD
   const PUBLIC_ROUTES = [
     {
       link: "/",
@@ -44,6 +45,30 @@ const MainRoutes = () => {
     },
 >>>>>>> e18a518fdfde531c2d47093661a04a752a3c01b4
   ];
+=======
+    const PUBLIC_ROUTES = [
+        {
+            link: "/",
+            element: <HomePage />,
+            id: 1
+        },
+        {
+            link: "/admin",
+            element: <AdminPage />,
+            id: 2
+        },
+        {
+            link: "/menu",
+            element: <DishesPage />,
+            id: 3
+        },
+        {
+            link: "/edit/:id",
+            element: <EditDishesPage />,
+            id: 4
+        }
+    ];
+>>>>>>> 1272517c47d418840721f97fe3122bb7a016c9b1
 
   return (
     <Routes>

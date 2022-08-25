@@ -29,6 +29,7 @@ const AddDish = () => {
     }
   };
 
+<<<<<<< HEAD
   return (
     <div className="add-container">
       <input
@@ -65,6 +66,19 @@ const AddDish = () => {
       </div>
     </div>
   );
+=======
+    return (
+        <div>
+            <input type="text" name="name" placeholder="Name" onChange={handleInp} />
+            <input type="text" name="description" placeholder="Description" onChange={handleInp} />
+            <input type="text" name="price" placeholder="Price" onChange={handleInp} />
+            <button onClick={() => {
+                addDishes(dish);
+                navigate("/menu");
+            }}>Add Dish</button>
+        </div>
+    );
+>>>>>>> 1272517c47d418840721f97fe3122bb7a016c9b1
 };
 
 export default AddDish;
