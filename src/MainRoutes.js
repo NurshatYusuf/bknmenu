@@ -26,7 +26,7 @@ const MainRoutes = () => {
       link: "/edit/:id",
       element: <EditDishesPage />,
       id: 4,
-    },
+    }
   ];
 
   return (
