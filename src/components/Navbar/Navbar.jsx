@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../../styles/components/navbar.css";
 import { useLocation } from "react-router-dom";
+import { useAuth } from "../../contexts/userContext";
 
 const Navbar = () => {
   const pages = [
@@ -15,7 +16,7 @@ const Navbar = () => {
     },
     {
       type: "Booking",
-      path: "/book",
+      path: "/booking",
     },
   ];
 
@@ -28,11 +29,9 @@ const Navbar = () => {
       type: "Login",
       path: "/login",
     },
-    {
-      type: "Logout",
-      path: "#",
-    },
   ];
+
+  const { logOut } = useAuth();
 
   const location = useLocation();
 
@@ -104,6 +103,9 @@ const Navbar = () => {
                 {page.type}
               </button>
             ))}
+            <button className="navbar__btn" onClick={() => logOut()}>
+              Logout
+            </button>
           </div>
         </header>
       )}

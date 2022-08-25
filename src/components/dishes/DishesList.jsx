@@ -3,6 +3,7 @@ import { useDishes } from "../../contexts/DishesContextProvider";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import DishCard from "./DishCard";
 import AOS from "aos";
+import FilterDishes from "./FilterDishes";
 
 import "../../styles/DishesList.css";
 
@@ -65,10 +66,11 @@ const DishesList = () => {
         <button className="d-list__btn" onClick={() => navigate("/add")}>
           Add Dish
         </button>
+        <FilterDishes />
       </div>
       <div className="dishes-list">
         {dishes ? (
-          dishes.map((item) => <DishCard item={item} />)
+          dishes.map((item) => <DishCard item={item} key={item.id} />)
         ) : (
           <h3>Loading...</h3>
         )}

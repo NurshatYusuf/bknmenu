@@ -7,44 +7,50 @@ import EditDishesPage from "./pages/EditDishesPage";
 import LoginPage from "./pages/LoginPage";
 import RegistrationPage from "./pages/RegistrationPage";
 import PaymentPage from "./pages/PaymentPage";
+import BookingPage from "./pages/BookingPage";
 
 const MainRoutes = () => {
-    const PUBLIC_ROUTES = [
-        {
-          link: "/",
-          element: <HomePage />,
-          id: 1,
-        },
-        {
-          link: "/add",
-          element: <AdminPage />,
-          id: 2,
-        },
-        {
-          link: "/menu",
-          element: <DishesPage />,
-          id: 3,
-        },
-        {
-          link: "/edit/:id",
-          element: <EditDishesPage />,
-          id: 4,
-        },
-        {
-          link: "/registration",
-          element: <RegistrationPage />,
-          id: 5,
-        },
-        {
-          link: "/login",
-          element: <LoginPage />,
-          id: 6,
-        },
-        {
-            link: "/payment",
-            element: <PaymentPage />,
-            id: 7
-        }
+  const PUBLIC_ROUTES = [
+    {
+      link: "/",
+      element: <HomePage />,
+      id: 1,
+    },
+    {
+      link: "/add",
+      element: <AdminPage />,
+      id: 2,
+    },
+    {
+      link: "/menu",
+      element: <DishesPage />,
+      id: 3,
+    },
+    {
+      link: "/edit/:id",
+      element: <EditDishesPage />,
+      id: 4,
+    },
+    {
+      link: "/registration",
+      element: <RegistrationPage />,
+      id: 5,
+    },
+    {
+      link: "/login",
+      element: <LoginPage />,
+      id: 6,
+    },
+    {
+      link: "/booking",
+      element: <BookingPage />,
+      id: 7,
+    },
+    {
+      link: "/payment",
+      element: <PaymentPage />,
+      id: 8,
+    },
   ];
 
   return (
