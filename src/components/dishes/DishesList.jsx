@@ -34,6 +34,22 @@ const DishesList = () => {
     });
   }, []);
 
+  // pagination
+
+  const [page, setPage] = useState(1);
+  const itemsOnPage = 6;
+  const count = Math.ceil(dishes.length / itemsOnPage);
+
+  const handlePage = (e, p) => {
+    setPage(p);
+  };
+
+  function currentData() {
+    const begin = (page - 1) * itemsOnPage;
+    const end = begin + itemsOnPage;
+    return dishes.slice(begin, end);
+  }
+
   return (
     <div className="list-container" data-aos="fade-up" data-aos-duration="2000">
       <div className="list__title">

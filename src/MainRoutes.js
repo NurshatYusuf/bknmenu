@@ -6,6 +6,7 @@ import DishesPage from "./pages/DishesPage";
 import EditDishesPage from "./pages/EditDishesPage";
 import LoginPage from "./pages/LoginPage";
 import RegistrationPage from "./pages/RegistrationPage";
+import PaymentPage from "./pages/PaymentPage";
 import BookingPage from "./pages/BookingPage";
 
 const MainRoutes = () => {
@@ -44,6 +45,11 @@ const MainRoutes = () => {
       link: "/booking",
       element: <BookingPage />,
       id: 7,
+    },
+    {
+      link: "/payment",
+      element: <PaymentPage />,
+      id: 8,
     },
   ];
 

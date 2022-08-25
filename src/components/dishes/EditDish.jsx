@@ -4,83 +4,84 @@ import { useNavigate, useParams } from "react-router-dom";
 import "../../styles/components/edit-dish.css";
 
 const EditDish = () => {
-  const { getDishesDetails, dishesDetails, saveEditedDishes } = useDishes();
 
-  const navigate = useNavigate();
+    const {getDishesDetails, dishesDetails, saveEditedDishes} = useDishes();
 
-  const { id } = useParams();
+    const navigate = useNavigate();
 
-  const [dish, setDish] = useState(dishesDetails);
+    const {id} = useParams();
 
-  useEffect(() => {
-    setDish(dishesDetails);
-  }, [dishesDetails]);
+    const [dish, setDish] = useState(dishesDetails);
 
-  useEffect(() => {
-    getDishesDetails(id);
-  }, []);
+    useEffect(() => {
+        setDish(dishesDetails);
+    }, [dishesDetails]);
 
-  const handleInp = (e) => {
-    if (e.target.name === "price") {
-      let obj = {
-        ...dish,
-        [e.target.name]: Number(e.target.value),
-      };
-      setDish(obj);
-    } else {
-      let obj = {
-        ...dish,
-        [e.target.name]: e.target.value,
-      };
-      setDish(obj);
-    }
-  };
+    useEffect(() => {
+        getDishesDetails(id);
+    }, []);
 
-  return (
-    <>
-      {dish ? (
-        <div className="edit-container">
-          <input
-            type="text"
-            value={dish.name}
-            placeholder="Name"
-            name="name"
-            onChange={handleInp}
-            className="edit__inp"
-          />
-          <input
-            type="text"
-            value={dish.description}
-            placeholder="Description"
-            name="description"
-            onChange={handleInp}
-            className="edit__inp"
-          />
-          <input
-            type="text"
-            value={dish.price}
-            placeholder="Price"
-            name="price"
-            onChange={handleInp}
-            className="edit__inp"
-          />
-          <div className="edit-container__btn">
-            <button
-              onClick={() => {
-                saveEditedDishes(dish);
-                navigate("/menu");
-              }}
-              className="edit__btn"
-            >
-              Save Changes
-            </button>
-          </div>
-        </div>
-      ) : (
-        <h3>Loading...</h3>
-      )}
-    </>
-  );
+    const handleInp = (e) => {
+        if (e.target.name === "price") {
+            let obj = {
+                ...dish,
+                [e.target.name]: Number(e.target.value),
+            };
+            setDish(obj);
+        } else {
+            let obj = {
+                ...dish,
+                [e.target.name]: e.target.value,
+            };
+            setDish(obj);
+        }
+    };
+
+    return (
+        <>
+            {dish ? (
+                <div className="edit-container">
+                    <input
+                        type="text"
+                        value={dish.name}
+                        placeholder="Name"
+                        name="name"
+                        onChange={handleInp}
+                        className="edit__inp"
+                    />
+                    <input
+                        type="text"
+                        value={dish.description}
+                        placeholder="Description"
+                        name="description"
+                        onChange={handleInp}
+                        className="edit__inp"
+                    />
+                    <input
+                        type="text"
+                        value={dish.price}
+                        placeholder="Price"
+                        name="price"
+                        onChange={handleInp}
+                        className="edit__inp"
+                    />
+                    <div className="edit-container__btn">
+                        <button
+                            onClick={() => {
+                                saveEditedDishes(dish);
+                                navigate("/menu");
+                            }}
+                            className="edit__btn"
+                        >
+                            Save Changes
+                        </button>
+                    </div>
+                </div>
+            ) : (
+                <h3>Loading...</h3>
+            )}
+        </>
+    );
 };
 
 export default EditDish;
