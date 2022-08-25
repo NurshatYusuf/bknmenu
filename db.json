@@ -1,4 +1,23 @@
 {
+<<<<<<< HEAD
+  "users": [
+    {
+      "userName": "Nur",
+      "name": "Nurshat",
+      "lastName": "Yusuf",
+      "password": "123",
+      "isLogin": true,
+      "id": 1
+    },
+    {
+      "userName": "zuhkra",
+      "name": "zukhra",
+      "lastName": "shuhrat",
+      "password": "321",
+      "isLogin": false,
+      "id": 2
+    }
+  ],
   "dishes": [
     {
       "name": "Stake",
@@ -19,4 +38,7 @@
       "id": 5
     }
   ]
+=======
+  "dishes": []
+>>>>>>> 1272517c47d418840721f97fe3122bb7a016c9b1
 }
