@@ -7,6 +7,6 @@ export const calcSubPrice = (dish) => +dish.count * dish.item.price;
 
 export const calcTotalPrice = (dishes) => {
     return dishes.reduce((pV, cur) => {
-        return (pV += cur.subPrice)
+        return (pV += cur.subPrice);
     }, 0);
 };

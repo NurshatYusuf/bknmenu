@@ -126,6 +126,6 @@ const CartContextProvider = ({ children }) => {
             {children}
         </cartContext.Provider>
     )
-}
+};
 
 export default CartContextProvider;
