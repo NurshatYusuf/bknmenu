@@ -4,6 +4,8 @@ import HomePage from "./pages/HomePage";
 import AdminPage from "./pages/AdminPage";
 import DishesPage from "./pages/DishesPage";
 import EditDishesPage from "./pages/EditDishesPage";
+import LoginPage from "./pages/LoginPage";
+import RegistrationPage from "./pages/RegistrationPage";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -26,6 +28,16 @@ const MainRoutes = () => {
       link: "/edit/:id",
       element: <EditDishesPage />,
       id: 4,
+    },
+    {
+      link: "/registration",
+      element: <RegistrationPage />,
+      id: 5,
+    },
+    {
+      link: "/login",
+      element: <LoginPage />,
+      id: 6,
     },
   ];
 
