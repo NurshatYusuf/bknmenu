@@ -19,22 +19,214 @@
   ],
   "dishes": [
     {
-      "name": "Stake",
-      "description": "Very spicy",
-      "price": "5000",
+      "name": "Pan con alioli",
+      "description": "Bread with alioli",
+      "category":  "bread",
+      "price": "6",
       "id": 3
     },
     {
-      "name": "Soup",
-      "description": "Delicious",
-      "price": "100",
+      "name": "Pan de ajo",
+      "description": "Grilled bread with garlic oil",
+      "category": "bread",
+      "price": "5",
       "id": 4
     },
     {
-      "name": "Chiken",
-      "description": "Tasty",
-      "price": "100",
+      "name": "Pan con tomate",
+      "description": "Grilled bread with homemade tomato salsa",
+      "category": "bread",
+      "price": "7",
       "id": 5
+    },
+    {
+      "name": "Pinchos de verduras",
+      "description": "2 small vegetable skewers with roquefort sauce",
+      "category": "Vegetables + Cheese",
+      "price": "80",
+      "id": 6
+    },
+    {
+      "name": "Cheese balls",
+      "description": "Cheese croquettes",
+      "category": "Vegetables + Cheese",
+      "price": "50",
+      "id": 7
+    },
+    {
+      "name": "Aceitunas",
+      "description": "Mixed olives",
+      "category": "Vegetables + Cheese",
+      "price": "60",
+      "id": 8
+    },
+    {
+      "name": "Pimentos de Padrón",
+      "description": "Grilled Spanish Padrón peppers with sea salt",
+      "category": "Vegetables + Cheese",
+      "price": "70",
+      "id": 9
+    },
+    {
+      "name": "Queso manchego",
+      "description": "Spanish sheep's cheese with honey",
+      "category": "Vegetables + Cheese",
+      "price": "60",
+      "id": 10
+    },
+    {
+      "name": "Verduras a la parrilla",
+      "description": "Grilled courgette, grilled sweet pepper, grilled tomato",
+      "category": "Vegetables + Cheese",
+      "price": "80",
+      "id": 11
+    },
+    {
+      "name": "Nachos sin carne",
+      "description": "Nachos, tomato salsa, cheese and sourcream",
+      "category": "Vegetables + Cheese",
+      "price": "90",
+      "id": 12
+    },
+    {
+      "name": "Patatas con alioli",
+      "description": "With Alioli",
+      "category": "Vegetables + Cheese",
+      "price": "50",
+      "id": 13
+    },
+    {
+      "name": "Champiñones a la crema y ajo",
+      "description": "Mushrooms in garlic cream sauce",
+      "category": "Vegetables + Cheese",
+      "price": "80",
+      "id": 14
+    },
+    {
+      "name": "Tortilla Española",
+      "description": "Spanish potato tortilla, freshly made | preparation time +/- 20 minutes",
+      "category": "Vegetables + Cheese",
+      "price": "100",
+      "id": 15
+    },
+    {
+      "name": "Caprese de Milano",
+      "description": "Mozzarella with grilled tomato, homemade basil oil and balsamic cream",
+      "category": "Vegetables + Cheese",
+      "price": "80",
+      "id": 16
+    },
+    {
+      "name": "SEPIA A LA PLANCHA",
+      "description": "Grilled squid",
+      "category": "fish",
+      "price": "120",
+      "id": 17
+    },
+    {
+      "name": "Calamares",
+      "description": "Hand-cut, deep-fried squid rings in beer batter with alioli",
+      "category": "fish",
+      "price": "90",
+      "id": 18
+    },
+    {
+      "name": "Gambas al ajillio",
+      "description": "Large prawns in red garlic oil",
+      "category": "fish",
+      "price": "100",
+      "id": 19
+    },
+    {
+      "name": "CROQUETAS DE BACALAO",
+      "description": "2 rolls with cod croquettes and homemade lobster mayonnaise",
+      "category": "fish",
+      "price": "80",
+      "id": 20
+    },
+    {
+      "name": "Croquetas caseras de paella",
+      "description": "Handmade paella croquettes with meat and fish",
+      "category": "meat",
+      "price": "70",
+      "id": 21
+    },
+    {
+      "name": "Jamón serrano",
+      "description": "Serrano ham with truffle cream",
+      "category": "meat",
+      "price": "90",
+      "id": 22
+    },
+    {
+      "name": "Nachos con carne",
+      "description": "Nachos, chilli con carne, cheese and sourcream",
+      "category": "meat",
+      "price": "100",
+      "id": 23
+    },
+    {
+      "name": "Carpaccio de carne",
+      "description": "Hand-cut beef carpaccio with homemade truffle cream",
+      "category": "meat",
+      "price": "120",
+      "id": 24
+    },
+    {
+      "name": "Datiles con bacon",
+      "description": "Dates rolled in bacon",
+      "category": "meat",
+      "price": "60",
+      "id": 25
+    },
+    {
+      "name": "Solomillo de pimienta",
+      "description": "Medium grilled sirloin steaks with homemade pepper cream sauce",
+      "category": "meat",
+      "price": "100",
+      "id": 26
+    },
+    {
+      "name": "Pinchos EspaÑa",
+      "description": "2 tenderloin skewers, Spanish marinated",
+      "category": "meat",
+      "price": "90",
+      "id": 27
+    },
+    {
+      "name": "Alitas de pollo de la casa",
+      "description": "Homemade spiced chicken wings with honey",
+      "category": "meat",
+      "price": "90",
+      "id": 28
+    },
+    {
+      "name": "Albóndigas",
+      "description": "Home-made meatballs in tomato sauce",
+      "category": "meat",
+      "price": "70",
+      "id": 29
+    },
+    {
+      "name": "HELADO DE CREMA LICOR 43",
+      "description": "3 scoops of ice cream with orange and licor 43",
+      "category": "dessert",
+      "price": "90",
+      "id": 30
+    },
+    {
+      "name": "Tiramisu de la barraca",
+      "description": "Our Homemade Tiramisu with salted caramel",
+      "category": "dessert",
+      "price": "90",
+      "id": 31
+    },
+    {
+      "name": "Flan Catalan",
+      "description": "Catalan flan caramel pudding",
+      "category": "dessert",
+      "price": "70",
+      "id": 32
     }
   ]
 }

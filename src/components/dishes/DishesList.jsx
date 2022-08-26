@@ -5,6 +5,7 @@ import DishCard from "./DishCard";
 import AOS from "aos";
 
 import "../../styles/DishesList.css";
+import {Pagination} from "@mui/material";
 
 const DishesList = () => {
   const { dishes, getDishes, deleteDishes } = useDishes();
@@ -25,6 +26,7 @@ const DishesList = () => {
 
   useEffect(() => {
     getDishes();
+    setPage(1);
   }, [searchParams]);
 
   useEffect(() => {
@@ -32,8 +34,6 @@ const DishesList = () => {
       duration: 2000,
     });
   }, []);
-
-  // pagination
 
   const [page, setPage] = useState(1);
   const itemsOnPage = 6;
@@ -67,12 +67,12 @@ const DishesList = () => {
         </button>
       </div>
       <div className="dishes-list">
-        {dishes ? (
-          dishes.map((item) => <DishCard item={item} />)
+        {dishes ? (currentData().map((item) => <DishCard item={item} key={item.id} />)
         ) : (
           <h3>Loading...</h3>
         )}
       </div>
+      <Pagination count={count} page={page} onChange={handlePage} />
     </div>
   );
 };
