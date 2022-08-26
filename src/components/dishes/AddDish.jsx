@@ -10,6 +10,7 @@ const AddDish = () => {
   const [dish, setDish] = useState({
     name: "",
     description: "",
+    category: "",
     price: "",
   });
 
@@ -47,6 +48,13 @@ const AddDish = () => {
       />
       <input
         type="text"
+        name="category"
+        placeholder="Category"
+        onChange={handleInp}
+        className="add__inp"
+      />
+      <input
+        type="text"
         name="price"
         placeholder="Price"
         onChange={handleInp}
@@ -65,17 +73,6 @@ const AddDish = () => {
       </div>
     </div>
   );
-    return (
-        <div>
-            <input type="text" name="name" placeholder="Name" onChange={handleInp} />
-            <input type="text" name="description" placeholder="Description" onChange={handleInp} />
-            <input type="text" name="price" placeholder="Price" onChange={handleInp} />
-            <button onClick={() => {
-                addDishes(dish);
-                navigate("/menu");
-            }}>Add Dish</button>
-        </div>
-    );
 };
 
 export default AddDish;

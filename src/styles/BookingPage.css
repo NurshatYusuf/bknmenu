@@ -1,0 +1,85 @@
+.booking-container {
+  width: 90%;
+  height: 1050px;
+  margin-top: 20px;
+  position: relative;
+  z-index: 0;
+  background-image: url(../images/Booking_holl.png);
+}
+
+.table__img {
+  width: 100%;
+}
+
+.booking__table {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  cursor: pointer;
+}
+
+.booking__round-table {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+#id0 {
+  left: 410px;
+  top: 100px;
+}
+
+#id1 {
+  top: 100px;
+}
+
+#id2 {
+  top: 220px;
+  left: 380px;
+}
+
+#id3 {
+  bottom: 60px;
+  left: 190px;
+}
+
+#id4 {
+  bottom: 60px;
+  left: 335px;
+}
+
+#id5 {
+  bottom: 60px;
+  left: 450px;
+}
+
+#id6 {
+  bottom: 60px;
+  left: 590px;
+}
+
+#id7 {
+  bottom: 60px;
+  left: 690px;
+}
+
+#id8 {
+  bottom: 60px;
+  left: 830px;
+}
+
+#id9 {
+  bottom: 220px;
+  left: 250px;
+}
+
+#id10 {
+  bottom: 220px;
+  left: 400px;
+}

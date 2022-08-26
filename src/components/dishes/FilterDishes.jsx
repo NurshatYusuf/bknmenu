@@ -18,7 +18,7 @@ const FilterDishes = () => {
           id="all"
           value="all"
         />
-        <label for="all">All</label>
+        <label htmlFor="all">All</label>
       </div>
       <div className="fil__block">
         <input
@@ -28,7 +28,7 @@ const FilterDishes = () => {
           id="main"
           value="Main"
         />
-        <label for="main">Main</label>
+        <label htmlFor="main">Main</label>
       </div>
       <div className="fil__block">
         <input
@@ -38,7 +38,7 @@ const FilterDishes = () => {
           id="soup"
           value="Soup"
         />
-        <label for="soup">Soup</label>
+        <label htmlFor="soup">Soup</label>
       </div>
       <div className="fil__block">
         <input
@@ -48,7 +48,7 @@ const FilterDishes = () => {
           id="salad"
           value="Salad"
         />
-        <label for="salad">Salad</label>
+        <label htmlFor="salad">Salad</label>
       </div>
       <div className="fil__block">
         <input
@@ -58,7 +58,7 @@ const FilterDishes = () => {
           id="drinks"
           value="Drinks"
         />
-        <label for="drinks">Drinks</label>
+        <label htmlFor="drinks">Drinks</label>
       </div>
     </form>
   );
