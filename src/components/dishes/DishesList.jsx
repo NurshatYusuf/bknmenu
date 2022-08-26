@@ -3,6 +3,7 @@ import { useDishes } from "../../contexts/DishesContextProvider";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import DishCard from "./DishCard";
 import AOS from "aos";
+import FilterDishes from "./FilterDishes";
 
 import "../../styles/DishesList.css";
 import {Pagination} from "@mui/material";
@@ -65,6 +66,7 @@ const DishesList = () => {
         <button className="d-list__btn" onClick={() => navigate("/add")}>
           Add Dish
         </button>
+        <FilterDishes />
       </div>
       <div className="dishes-list">
         {dishes ? (currentData().map((item) => <DishCard item={item} key={item.id} />)

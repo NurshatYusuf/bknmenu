@@ -5,7 +5,7 @@
       "name": "Nurshat",
       "lastName": "Yusuf",
       "password": "123",
-      "isLogin": true,
+      "isLogin": false,
       "id": 1
     },
     {
@@ -15,6 +15,14 @@
       "password": "321",
       "isLogin": false,
       "id": 2
+    },
+    {
+      "userName": "Arman",
+      "name": "Arman",
+      "lastName": "Abaydillaev",
+      "password": "123",
+      "isLogin": false,
+      "id": 3
     }
   ],
   "dishes": [

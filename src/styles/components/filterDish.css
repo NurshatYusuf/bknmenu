@@ -1,0 +1,20 @@
+.fil__block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+}
+
+.fil__block:focus {
+  background-color: #000;
+  color: #fff;
+}
+
+.fil__inp {
+  margin-right: 10px;
+}
+/* 
+.fil__inp:focus + label {
+  background-color: #000;
+  color: #fff;
+} */
