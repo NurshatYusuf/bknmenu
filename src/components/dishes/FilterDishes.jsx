@@ -18,47 +18,57 @@ const FilterDishes = () => {
           id="all"
           value="all"
         />
-        <label for="all">All</label>
+        <label htmlFor="all">All</label>
       </div>
       <div className="fil__block">
         <input
           className="fil__inp"
           name="category"
           type="radio"
-          id="main"
-          value="Main"
+          id="bread"
+          value="bread"
         />
-        <label for="main">Main</label>
+        <label htmlFor="bread">Bread</label>
       </div>
       <div className="fil__block">
         <input
           className="fil__inp"
           name="category"
           type="radio"
-          id="soup"
-          value="Soup"
+          id="Vegetables + Cheese"
+          value="Vegetables + Cheese"
         />
-        <label for="soup">Soup</label>
+        <label htmlFor="Vegetables + Cheese">Vegetables + Cheese</label>
       </div>
       <div className="fil__block">
         <input
           className="fil__inp"
           name="category"
           type="radio"
-          id="salad"
-          value="Salad"
+          id="fish"
+          value="fish"
         />
-        <label for="salad">Salad</label>
+        <label htmlFor="fish">Fish</label>
       </div>
       <div className="fil__block">
         <input
           className="fil__inp"
           name="category"
           type="radio"
-          id="drinks"
-          value="Drinks"
+          id="meat"
+          value="meat"
         />
-        <label for="drinks">Drinks</label>
+        <label htmlFor="meat">Meat</label>
+      </div>
+      <div className="fil__block">
+        <input
+          className="fil__inp"
+          name="category"
+          type="radio"
+          id="dessert"
+          value="dessert"
+        />
+        <label htmlFor="dessert">Dessert</label>
       </div>
     </form>
   );

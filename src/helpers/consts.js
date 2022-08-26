@@ -11,8 +11,8 @@ export const ACTIONS = {
 };
 
 export const CART = {
-  GET_CART: 'GET_CART',
-  GET_CART_LENGTH: 'GET_CART_LENGTH'
+  GET_CART: "GET_CART",
+  GET_CART_LENGTH: "GET_CART_LENGTH",
 };
 
 export const JSON_API_DISHES = "http://localhost:8000/dishes";
@@ -23,3 +23,8 @@ export const BOOKING_ACTIONS = {
 };
 
 export const JSON_API_BOOKING = "http://localhost:8000/booking";
+
+export const MODAL_ACTIONS = {
+  GET_MODAL: "GET_MODAL",
+  GET_ID: "GET_ID",
+};

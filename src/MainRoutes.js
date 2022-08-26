@@ -8,6 +8,7 @@ import LoginPage from "./pages/LoginPage";
 import RegistrationPage from "./pages/RegistrationPage";
 import PaymentPage from "./pages/PaymentPage";
 import BookingPage from "./pages/BookingPage";
+import ErrorPage from "./pages/ErrorPage";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -50,6 +51,11 @@ const MainRoutes = () => {
       link: "/payment",
       element: <PaymentPage />,
       id: 8,
+    },
+    {
+      link: "/*",
+      element: <ErrorPage />,
+      id: 9,
     },
   ];
 
