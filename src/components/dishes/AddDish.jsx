@@ -11,6 +11,7 @@ const AddDish = () => {
     name: "",
     description: "",
     price: "",
+    category: "",
   });
 
   const handleInp = (e) => {
@@ -49,6 +50,13 @@ const AddDish = () => {
         type="text"
         name="price"
         placeholder="Price"
+        onChange={handleInp}
+        className="add__inp"
+      />
+      <input
+        type="text"
+        name="category"
+        placeholder="Category"
         onChange={handleInp}
         className="add__inp"
       />

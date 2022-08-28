@@ -5,7 +5,7 @@
       "name": "Nurshat",
       "lastName": "Yusuf",
       "password": "123",
-      "isLogin": true,
+      "isLogin": false,
       "id": 1
     },
     {
@@ -15,6 +15,14 @@
       "password": "321",
       "isLogin": false,
       "id": 2
+    },
+    {
+      "userName": "Arman",
+      "name": "Arman",
+      "lastName": "Abaydillaev",
+      "password": "123",
+      "isLogin": false,
+      "id": 3
     }
   ],
   "dishes": [
@@ -22,19 +30,29 @@
       "name": "Stake",
       "description": "Very spicy",
       "price": "5000",
+      "category": "Main",
       "id": 3
     },
     {
       "name": "Soup",
       "description": "Delicious",
       "price": "100",
+      "category": "Soup",
       "id": 4
     },
     {
       "name": "Chiken",
       "description": "Tasty",
       "price": "100",
+      "category": "Main",
       "id": 5
+    },
+    {
+      "name": "Cezar",
+      "description": "Vegetable salad",
+      "price": "300",
+      "category": "Salad",
+      "id": 6
     }
   ]
 }
