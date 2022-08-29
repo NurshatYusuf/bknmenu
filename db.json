@@ -29,7 +29,9 @@
     {
       "name": "Pan con alioli",
       "description": "Bread with alioli",
+
       "category":  "bread",
+
       "price": "6",
       "id": 3
     },

@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../styles/components/navbar.css";
 import { useLocation } from "react-router-dom";
 import { useAuth } from "../../contexts/userContext";
+
+
+import Badge from "@mui/material/Badge";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { styled } from "@mui/material/styles";
+import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
+import { useCart } from "../../contexts/CartContextProvider";
+
+
 
 const Navbar = () => {
   const pages = [
@@ -19,7 +29,7 @@ const Navbar = () => {
       path: "/booking",
     },
   ];
-
+  const pages2 = [{ type: <ShoppingCartIcon />, path: "/cart" }];
   const regPages = [
     {
       type: "Registration",
@@ -32,6 +42,12 @@ const Navbar = () => {
   ];
 
   const { logOut } = useAuth();
+
+  const { count, getCount } = useCart();
+  useEffect(() => {
+    getCount();
+  }, []);
+
 
   const location = useLocation();
 
@@ -47,6 +63,15 @@ const Navbar = () => {
   // ];
 
   const navigate = useNavigate();
+  const StyledBadge = styled(Badge)(({ theme }) => ({
+    "& .MuiBadge-badge": {
+      right: 0,
+      top: 15,
+      border: `2px solid ${theme.palette.background.paper}`,
+      padding: "0 4px",
+      background: "red",
+    },
+  }));
 
   return (
     <>
@@ -93,6 +118,27 @@ const Navbar = () => {
               LA BARASHKA
             </h1>
           </div>
+
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            {pages2.map((page2) => (
+              <Button
+                key={page2.type}
+                onClick={() => navigate(page2.path)}
+                sx={{ my: 2, color: "black", display: "block" }}
+              >
+                {page2.type}
+              </Button>
+            ))}
+
+            {pages2.map((page) => (
+              <StyledBadge
+                badgeContent={count}
+                color="primary"
+                sx={{ margin: 0, padding: 0 }}
+              ></StyledBadge>
+            ))}
+          </Box>
+
           <div className="reg__btn_group">
             {regPages.map((page) => (
               <button
