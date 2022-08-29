@@ -29,9 +29,7 @@
     {
       "name": "Pan con alioli",
       "description": "Bread with alioli",
-
-      "category":  "bread",
-
+      "category": "bread",
       "price": "6",
       "id": 3
     },
@@ -251,6 +249,18 @@
       "time": "22:02",
       "number": "2",
       "id": "id10"
+    },
+    {
+      "data": "2022-08-30",
+      "time": "23:20",
+      "number": "4",
+      "id": "id1"
+    },
+    {
+      "data": "2022-08-30",
+      "time": "14:35",
+      "number": "2",
+      "id": "id2"
     }
   ]
 }

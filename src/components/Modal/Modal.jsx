@@ -14,8 +14,6 @@ const Modal = () => {
     id: "",
   });
 
-  console.log(modalActive);
-
   const handleInp = (e) => {
     let obj = {
       ...booking,

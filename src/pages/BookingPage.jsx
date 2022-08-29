@@ -25,39 +25,6 @@ const BookingPage = () => {
           {item}
         </div>
       ))}
-      {/* <div className="booking__table first" >
-        <Table />
-      </div>
-      <div className="booking__table second">
-        <Table />
-      </div>
-      <div className="booking__table third">
-        <RoundTable />
-      </div>
-      <div className="booking__table fourth">
-        <RoundTable />
-      </div>
-      <div className="booking__table fifth">
-        <RoundTable />
-      </div>
-      <div className="booking__table sixth">
-        <RoundTable />
-      </div>
-      <div className="booking__table seventh">
-        <RoundTable />
-      </div>
-      <div className="booking__table eigth">
-        <RoundTable />
-      </div>
-      <div className="booking__table ninth">
-        <RoundTable />
-      </div>
-      <div className="booking__table tenth">
-        <Table />
-      </div>
-      <div className="booking__table eleventh">
-        <Table />
-      </div> */}
     </div>
   );
 };
