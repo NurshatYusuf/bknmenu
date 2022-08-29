@@ -13,7 +13,9 @@ export const ACTIONS = {
 export const CART = {
   GET_CART: "GET_CART",
   GET_CART_LENGTH: "GET_CART_LENGTH",
+
   GET_COUNT: "GET_COUNT",
+
 };
 
 export const JSON_API_DISHES = "http://localhost:8000/dishes";

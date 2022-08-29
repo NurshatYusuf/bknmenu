@@ -39,7 +39,9 @@ const LoginPage = () => {
 
       {/* {isLogin.isLogin === true ? ( */}
 
+
       <button onClick={() => logOut()}> LogOUT</button>
+
 
       {/* ) : (
         <></>

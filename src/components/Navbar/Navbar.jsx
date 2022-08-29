@@ -4,12 +4,15 @@ import "../../styles/components/navbar.css";
 import { useLocation } from "react-router-dom";
 import { useAuth } from "../../contexts/userContext";
 
+
 import Badge from "@mui/material/Badge";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import { useCart } from "../../contexts/CartContextProvider";
+
+
 
 const Navbar = () => {
   const pages = [
@@ -39,10 +42,12 @@ const Navbar = () => {
   ];
 
   const { logOut } = useAuth();
+
   const { count, getCount } = useCart();
   useEffect(() => {
     getCount();
   }, []);
+
 
   const location = useLocation();
 
