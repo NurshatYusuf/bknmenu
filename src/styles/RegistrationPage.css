@@ -1,10 +1,10 @@
-.add-container {
+.reg-container {
   width: 90%;
   display: flex;
   flex-wrap: wrap;
 }
 
-.add__inp {
+.reg__inp {
   width: 50%;
   margin: 30px 0;
   height: 40px;
@@ -14,12 +14,12 @@
   padding-left: 10px;
 }
 
-.add__inp:focus {
+.reg__inp:focus {
   border: none;
   outline: 1px solid black;
 }
 
-.add__btn {
+.reg__btn {
   width: 30%;
   height: 40px;
   background-color: transparent;
@@ -28,7 +28,7 @@
   border: 1px solid black;
 }
 
-.add__btn:hover {
+.reg__btn:hover {
   transition: 1s;
   color: white;
   background-color: #000;

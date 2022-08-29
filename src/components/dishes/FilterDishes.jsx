@@ -1,49 +1,77 @@
-import * as React from "react";
-import Radio from "@mui/material/Radio";
-import RadioGroup from "@mui/material/RadioGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import FormControl from "@mui/material/FormControl";
-import FormLabel from "@mui/material/FormLabel";
+import React from "react";
 import { useDishes } from "../../contexts/DishesContextProvider";
+import "../../styles/components/filterDish.css";
 
-export default function ControlledRadioButtonsGroup() {
+const FilterDishes = () => {
   const { fetchByParams } = useDishes();
 
   return (
-    <FormControl
-      style={{
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "center",
-        padding: "5px",
-        marginTop: "-29px",
-        marginBottom: "40px",
-      }}
+    <form
+      className="filtration"
+      onChange={(e) => fetchByParams("category", e.target.value)}
     >
-      <FormLabel
-        id="demo-controlled-radio-buttons-group"
-        style={{
-          marginRight: "25px",
-          fontSize: "18px",
-        }}
-      >
-        Categories:
-      </FormLabel>
-      <RadioGroup
-        aria-labelledby="demo-controlled-radio-buttons-group"
-        name="controlled-radio-buttons-group"
-        defaultValue="all"
-        onChange={(e) => {
-          fetchByParams("category", e.target.value);
-        }}
-        style={{ display: "flex", flexDirection: "row" }}
-      >
-        <FormControlLabel value="all" control={<Radio />} label="All" />
-        <FormControlLabel value="Main" control={<Radio />} label="Main" />
-        <FormControlLabel value="Soup" control={<Radio />} label="Soup" />
-        <FormControlLabel value="Salad" control={<Radio />} label="Salad" />
-        <FormControlLabel value="Drinks" control={<Radio />} label="Drinks" />
-      </RadioGroup>
-    </FormControl>
+      <div className="fil__block">
+        <input
+          className="fil__inp"
+          name="category"
+          type="radio"
+          id="all"
+          value="all"
+        />
+        <label htmlFor="all">All</label>
+      </div>
+      <div className="fil__block">
+        <input
+          className="fil__inp"
+          name="category"
+          type="radio"
+          id="bread"
+          value="bread"
+        />
+        <label htmlFor="bread">Bread</label>
+      </div>
+      <div className="fil__block">
+        <input
+          className="fil__inp"
+          name="category"
+          type="radio"
+          id="Vegetables + Cheese"
+          value="Vegetables + Cheese"
+        />
+        <label htmlFor="Vegetables + Cheese">Vegetables + Cheese</label>
+      </div>
+      <div className="fil__block">
+        <input
+          className="fil__inp"
+          name="category"
+          type="radio"
+          id="fish"
+          value="fish"
+        />
+        <label htmlFor="fish">Fish</label>
+      </div>
+      <div className="fil__block">
+        <input
+          className="fil__inp"
+          name="category"
+          type="radio"
+          id="meat"
+          value="meat"
+        />
+        <label htmlFor="meat">Meat</label>
+      </div>
+      <div className="fil__block">
+        <input
+          className="fil__inp"
+          name="category"
+          type="radio"
+          id="dessert"
+          value="dessert"
+        />
+        <label htmlFor="dessert">Dessert</label>
+      </div>
+    </form>
   );
-}
+};
+
+export default FilterDishes;

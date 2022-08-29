@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "../styles/LoginPage.css";
 import { useAuth } from "../contexts/userContext";
 
 const LoginPage = () => {
@@ -15,12 +15,13 @@ const LoginPage = () => {
   }
 
   return (
-    <div>
+    <div className="log-container">
       <input
         type="text"
         value={userName}
         onChange={(e) => setUserName(e.target.value)}
         placeholder="User Name"
+        className="log__inp"
       />
 
       <input
@@ -28,11 +29,18 @@ const LoginPage = () => {
         value={pass}
         onChange={(e) => setPass(e.target.value)}
         placeholder="Password"
+        className="log__inp"
       />
-      <button onClick={() => loginUser()}>Login</button>
+      <div>
+        <button className="log__btn" onClick={() => loginUser()}>
+          Login
+        </button>
+      </div>
 
       {/* {isLogin.isLogin === true ? ( */}
+
       <button onClick={() => logOut()}> LogOUT</button>
+
       {/* ) : (
         <></>
       )}

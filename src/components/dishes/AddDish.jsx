@@ -10,6 +10,7 @@ const AddDish = () => {
   const [dish, setDish] = useState({
     name: "",
     description: "",
+    category: "",
     price: "",
     category: "",
   });
@@ -43,6 +44,13 @@ const AddDish = () => {
         type="text"
         name="description"
         placeholder="Description"
+        onChange={handleInp}
+        className="add__inp"
+      />
+      <input
+        type="text"
+        name="category"
+        placeholder="Category"
         onChange={handleInp}
         className="add__inp"
       />

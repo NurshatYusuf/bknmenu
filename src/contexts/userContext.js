@@ -57,17 +57,18 @@ const UsersContextProvider = ({ children }) => {
     let { data } = await axios.get(API);
     let obj = data.find((item) => item.userName === userName);
     if (!obj) {
-      alert("No user");
+      alert("Users with this name dosn`t exist");
       return;
     }
     if (obj.password !== password) {
-      alert("No");
+      alert("Wrong password");
       return;
     }
     obj.isLogin = true;
     await axios.patch(`${API}/${obj.id}`, obj);
   }
-  async function logOut() {
+
+  async function logOut(userName) {
     let { data } = await axios.get(API);
     let obj = data.find((item) => item.isLogin === true);
     console.log(obj);
@@ -84,7 +85,6 @@ const UsersContextProvider = ({ children }) => {
   async function checkUniqueUserName(checkName) {
     let users = [];
     users.push(await axios.get(API));
-    console.log(users[0].data);
     return users[0].data.some((item) => item.userName === checkName);
   }
   function checkUserPassword(userName, pass) {

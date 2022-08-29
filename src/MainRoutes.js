@@ -6,6 +6,10 @@ import DishesPage from "./pages/DishesPage";
 import EditDishesPage from "./pages/EditDishesPage";
 import LoginPage from "./pages/LoginPage";
 import RegistrationPage from "./pages/RegistrationPage";
+import PaymentPage from "./pages/PaymentPage";
+import BookingPage from "./pages/BookingPage";
+import ErrorPage from "./pages/ErrorPage";
+import CartPage from "./pages/CartPage";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -38,6 +42,26 @@ const MainRoutes = () => {
       link: "/login",
       element: <LoginPage />,
       id: 6,
+    },
+    {
+      link: "/booking",
+      element: <BookingPage />,
+      id: 7,
+    },
+    {
+      link: "/payment",
+      element: <PaymentPage />,
+      id: 8,
+    },
+    {
+      link: "/*",
+      element: <ErrorPage />,
+      id: 9,
+    },
+    {
+      link: "/cart",
+      element: <CartPage />,
+      id: 10,
     },
   ];
 
