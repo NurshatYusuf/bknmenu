@@ -66,13 +66,12 @@ const UsersContextProvider = ({ children }) => {
     }
     obj.isLogin = true;
     await axios.patch(`${API}/${obj.id}`, obj);
-    console.log(obj);
   }
 
   async function logOut(userName) {
     let { data } = await axios.get(API);
-    let obj = data.find((item) => (item.isLogin = true));
-
+    let obj = data.find((item) => item.isLogin === true);
+    console.log(obj);
     obj.isLogin = false;
     await axios.patch(`${API}/${obj.id}`, obj);
   }

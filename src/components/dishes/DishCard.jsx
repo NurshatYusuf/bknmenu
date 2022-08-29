@@ -2,10 +2,13 @@ import React, { useEffect } from "react";
 import { useDishes } from "../../contexts/DishesContextProvider";
 import { useNavigate } from "react-router-dom";
 import "../../styles/components/dish_card.css";
+import { useCart } from "../../contexts/CartContextProvider";
+
 // import AOS from "aos";
 
 const DishCard = ({ item }) => {
   const { deleteDishes } = useDishes();
+  const { addDishToCart } = useCart();
   const navigate = useNavigate();
 
   // useEffect(() => {
@@ -28,6 +31,14 @@ const DishCard = ({ item }) => {
             onClick={() => navigate(`/edit/${item.id}`)}
           >
             Edit
+          </button>
+          <button
+            className="card__btn"
+            onClick={() => {
+              addDishToCart(item);
+            }}
+          >
+            Cart
           </button>
           <button className="card__btn" onClick={() => deleteDishes(item.id)}>
             Delete

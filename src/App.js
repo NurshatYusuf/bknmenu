@@ -8,19 +8,23 @@ import BookingContextProvider from "./contexts/BookingContextProvider";
 import Modal from "./components/Modal/Modal";
 import ModalBooked from "./components/Modal/ModalBooked";
 
+import CartContextProvider from "./contexts/CartContextProvider";
+
 function App() {
   return (
     <>
-      <BookingContextProvider>
-        <UsersContextProvider>
-          <DishesContextProvider>
-            <Navbar />
-            <MainRoutes />
-            <Modal />
-            <ModalBooked />
-          </DishesContextProvider>
-        </UsersContextProvider>
-      </BookingContextProvider>
+      <CartContextProvider>
+        <BookingContextProvider>
+          <UsersContextProvider>
+            <DishesContextProvider>
+              <Navbar />
+              <MainRoutes />
+              <Modal />
+              <ModalBooked />
+            </DishesContextProvider>
+          </UsersContextProvider>
+        </BookingContextProvider>
+      </CartContextProvider>
     </>
   );
 }
