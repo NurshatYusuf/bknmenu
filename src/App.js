@@ -6,6 +6,7 @@ import "./styles/index.css";
 import UsersContextProvider from "./contexts/userContext";
 import BookingContextProvider from "./contexts/BookingContextProvider";
 import Modal from "./components/Modal/Modal";
+import ModalBooked from "./components/Modal/ModalBooked";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Navbar />
             <MainRoutes />
             <Modal />
+            <ModalBooked />
           </DishesContextProvider>
         </UsersContextProvider>
       </BookingContextProvider>

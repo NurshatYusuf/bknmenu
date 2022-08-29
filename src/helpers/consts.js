@@ -28,3 +28,7 @@ export const MODAL_ACTIONS = {
   GET_MODAL: "GET_MODAL",
   GET_ID: "GET_ID",
 };
+
+export const MODAL_BOOKING_ACTIONS = {
+  GET_MODAL_BOOKING: "GET_MODAL_BOOKING",
+};

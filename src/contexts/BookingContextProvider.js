@@ -5,6 +5,7 @@ import {
   BOOKING_ACTIONS,
   JSON_API_BOOKING,
   MODAL_ACTIONS,
+  MODAL_BOOKING_ACTIONS,
 } from "../helpers/consts";
 
 export const bookingContext = createContext();
@@ -17,6 +18,7 @@ const INIT_STATE = {
   booking: [],
   bookingDetails: null,
   modalActive: false,
+  modalBookingActive: false,
   tableId: "",
 };
 
@@ -31,6 +33,11 @@ const reducer = (state = INIT_STATE, action) => {
       return { ...state, modalActive: action.payload };
     case MODAL_ACTIONS.GET_ID:
       return { ...state, tableId: action.payload };
+    // Modal booking
+    case MODAL_BOOKING_ACTIONS.GET_MODAL_BOOKING:
+      return { ...state, modalBookingActive: action.payload };
+    // case MODAL_BOOKING_ACTIONS.GET_BOOKING_ID:
+    //   return { ...state, modalBookingActive: action.payload };
     default:
       return state;
   }
@@ -79,18 +86,27 @@ const BookingContextProvider = ({ children }) => {
     getBooking();
   };
 
-  // Delete
+  // Delete;
 
-  // const deleteBooking = async (id) => {
-  //   await axios.patch(`${JSON_API_BOOKING}/${id}`);
-  //   getBooking();
-  // };
+  const deleteBooking = async (id) => {
+    await axios.patch(`${JSON_API_BOOKING}/${id}`);
+    getBooking();
+  };
 
   // Modal
 
   const setModal = (value) => {
     dispatch({
       type: MODAL_ACTIONS.GET_MODAL,
+      payload: value,
+    });
+  };
+
+  // Modal Booking
+
+  const setModalBooking = (value) => {
+    dispatch({
+      type: MODAL_BOOKING_ACTIONS.GET_MODAL_BOOKING,
       payload: value,
     });
   };
@@ -112,12 +128,14 @@ const BookingContextProvider = ({ children }) => {
     getBooking,
     getBookingDetails,
     saveEditedBooking,
-    // deleteBooking,
+    deleteBooking,
     //  modal
     modalActive: state.modalActive,
     tableId: state.tableId,
+    modalBookingActive: state.modalBookingActive,
     setModal,
     setId,
+    setModalBooking,
   };
 
   return (
