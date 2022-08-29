@@ -23,11 +23,12 @@
 }
 
 .navbar__btn {
-  width: 120px;
+  width: 100px;
   height: 40px;
   background-color: transparent;
   transition: 1s;
   font-family: "Aboreto", cursive;
+  font-size: 12px;
   border: 1px solid black;
 }
 
@@ -73,11 +74,12 @@
 }
 
 .navbar__btn_dark {
-  width: 120px;
+  width: 100px;
   height: 40px;
   background-color: transparent;
   transition: 1s;
   font-family: "Aboreto", cursive;
+  font-size: 12px;
   color: white;
   border: none;
 }

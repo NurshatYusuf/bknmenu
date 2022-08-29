@@ -55,7 +55,6 @@ const BookingContextProvider = ({ children }) => {
   //   Add Booking
 
   const addBooking = async (newBooking) => {
-    console.log(newBooking);
     await axios.post(JSON_API_BOOKING, newBooking);
 
     getBooking();
@@ -89,7 +88,7 @@ const BookingContextProvider = ({ children }) => {
   // Delete;
 
   const deleteBooking = async (id) => {
-    await axios.patch(`${JSON_API_BOOKING}/${id}`);
+    await axios.delete(`${JSON_API_BOOKING}/${id}`);
     getBooking();
   };
 

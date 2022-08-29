@@ -3,7 +3,7 @@ import "../styles/LoginPage.css";
 import { useAuth } from "../contexts/userContext";
 
 const LoginPage = () => {
-  const { logOut, loginUser2 } = useAuth();
+  const { loginUser2 } = useAuth();
 
   const [userName, setUserName] = useState("");
   const [pass, setPass] = useState("");
@@ -36,17 +36,6 @@ const LoginPage = () => {
           Login
         </button>
       </div>
-
-      {/* {isLogin.isLogin === true ? ( */}
-
-
-      <button onClick={() => logOut()}> LogOUT</button>
-
-
-      {/* ) : (
-        <></>
-      )}
-      {isLogin.isLogin == true ? <h5>You are logged in</h5> : <></>} */}
     </div>
   );
 };

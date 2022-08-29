@@ -6,53 +6,40 @@ const ModalBooked = () => {
   const {
     modalBookingActive,
     setModalBooking,
-    getBookingDetails,
-    saveEditedBooking,
+    getBooking,
     deleteBooking,
     tableId,
-    bookingDetails,
+    booking,
   } = useBooking();
 
   const [modalActiveLocal, setModalActiveLocal] = useState(false);
 
-  const [booking, setBooking] = useState(bookingDetails);
-
-  //   const handleInp = (e) => {
-  //     let obj = {
-  //       ...booking,
-  //       [e.target.name]: e.target.value,
-  //     };
-  //     setBooking(obj);
-  //   };
+  const [bookingLocal, setBookingLocal] = useState([]);
 
   useEffect(() => {
     setModalActiveLocal(modalBookingActive);
   }, [modalBookingActive]);
 
   useEffect(() => {
-    getBookingDetails(tableId);
+    getBooking();
   }, []);
 
   useEffect(() => {
-    setBooking(bookingDetails);
-  }, [bookingDetails]);
-
-  useEffect(() => {
-    setBooking({
-      ...bookingDetails,
-      id: tableId,
-    });
+    const table = booking.filter((item) => item.id === tableId);
+    setBookingLocal(table);
   }, [tableId]);
 
-  //  ВОТ ТУТ ВЫХОДЯТ ВСЕ БРОНИ, ХОТЯ ПО ЗАПРОСУ ДОЛЖЕН БЫЛ ЛИШЬ 1
-  console.log(bookingDetails);
+  useEffect(() => {
+    const table = booking.filter((item) => item.id === tableId);
+    setBookingLocal(table);
+  }, [booking]);
 
   return (
     <div
       className={modalActiveLocal ? "modal-booking active" : "modal-booking"}
       onClick={() => setModalBooking(false)}
     >
-      {booking ? (
+      {bookingLocal.length === 1 ? (
         <div
           className={
             modalActiveLocal
@@ -65,9 +52,16 @@ const ModalBooked = () => {
         >
           <h1 className="modal-booking__content_title">Booking</h1>
 
-          <p>{booking.data}</p>
-          <p>{booking.time}</p>
-          <p>{booking.number}</p>
+          <p className="modal-booking__content_p">
+            {" "}
+            Date: {bookingLocal[0].data}
+          </p>
+          <p className="modal-booking__content_p">
+            Time: {bookingLocal[0].time}
+          </p>
+          <p className="modal-booking__content_p">
+            Number of people: {bookingLocal[0].number}
+          </p>
           <button
             className="modal-booking__content_btn"
             onClick={() => {
@@ -79,16 +73,9 @@ const ModalBooked = () => {
           <button
             className="modal-booking__content_btn"
             onClick={() => {
-              saveEditedBooking();
-              setModalBooking(false);
-            }}
-          >
-            Edit
-          </button>
-          <button
-            className="modal-booking__content_btn"
-            onClick={() => {
-              deleteBooking({ tableId });
+              console.log(tableId);
+              deleteBooking(tableId);
+              setBookingLocal([]);
               setModalBooking(false);
             }}
           >

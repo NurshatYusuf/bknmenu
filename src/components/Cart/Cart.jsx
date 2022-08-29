@@ -1,4 +1,3 @@
-
 import * as React from "react";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -10,6 +9,10 @@ import Paper from "@mui/material/Paper";
 // custom imports
 import { useCart } from "../../contexts/CartContextProvider";
 import { Alert, Button, TextField, Typography } from "@mui/material";
+
+import { useNavigate } from "react-router-dom";
+
+import "../../styles/cart.css";
 
 export default function Cart() {
   const { getCart, cart, deleteDishInCart, changeDishCount, getCount } =
@@ -25,6 +28,8 @@ export default function Cart() {
     localStorage.removeItem("sum");
     getCount();
   }
+
+  const navigate = useNavigate();
 
   return (
     <TableContainer component={Paper}>
@@ -65,8 +70,11 @@ export default function Cart() {
               </TableCell>
               <TableCell align="right">{row.subPrice}</TableCell>
               <TableCell align="right">
-                <button onClick={() => deleteDishInCart(row.item.id)}>
-                  Delete From Cart
+                <button
+                  className="cart__btn"
+                  onClick={() => deleteDishInCart(row.item.id)}
+                >
+                  Delete
                 </button>
               </TableCell>
             </TableRow>
@@ -75,10 +83,15 @@ export default function Cart() {
       </Table>
       <Typography variant="h6" component="div">
         Total price: {cart?.totalPrice}
-        <Button onClick={cartCleaner}>BUY NOW</Button>
       </Typography>
+      <button
+        className="cart__btn"
+        onClick={() => {
+          navigate("/payment");
+        }}
+      >
+        BUY NOW
+      </button>
     </TableContainer>
   );
 }
-
-export default Cart;
