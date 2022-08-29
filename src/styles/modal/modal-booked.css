@@ -45,22 +45,14 @@
   justify-content: center;
 }
 
-.modal-booking__content_inp {
+.modal-booking__content_p {
   width: 80%;
   height: 40px;
-  border: none;
   font-family: "Aboreto", cursive;
-  border-bottom: 1px solid black;
-  padding-left: 10px;
-}
-
-.modal-booking__content_inp:focus {
-  border: none;
-  outline: 1px solid black;
 }
 
 .modal-booking__content_btn {
-  width: 40%;
+  width: 20%;
   height: 40px;
   background-color: transparent;
   transition: 1s;

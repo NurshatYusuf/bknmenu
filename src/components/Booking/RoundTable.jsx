@@ -5,7 +5,8 @@ import bookedTable from "../../images/booked-round-table.png";
 import { useBooking } from "../../contexts/BookingContextProvider";
 
 const Table = ({ id }) => {
-  const { setModal, setId, getBooking, booking } = useBooking();
+  const { setModal, setId, setModalBooking, getBooking, booking } =
+    useBooking();
 
   const [tableBooking, setTableBooking] = useState(booking);
 
@@ -26,10 +27,10 @@ const Table = ({ id }) => {
       {tableBooking.length && checkBookingTable(id) ? (
         <span
           className="booking__table"
-          // onClick={() => {
-          //   // setModal(true);
-          //   // setId(id);
-          // }}
+          onClick={() => {
+            setId(id);
+            setModalBooking(true);
+          }}
         >
           <img className="table__img" src={bookedTable} alt="No connect" />
         </span>

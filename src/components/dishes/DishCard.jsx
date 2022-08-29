@@ -4,18 +4,10 @@ import { useNavigate } from "react-router-dom";
 import "../../styles/components/dish_card.css";
 import { useCart } from "../../contexts/CartContextProvider";
 
-// import AOS from "aos";
-
 const DishCard = ({ item }) => {
   const { deleteDishes } = useDishes();
   const { addDishToCart } = useCart();
   const navigate = useNavigate();
-
-  // useEffect(() => {
-  //   AOS.init({
-  //     duration: 3000,
-  //   });
-  // }, []);
 
   return (
     <div className="card">

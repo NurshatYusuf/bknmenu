@@ -27,13 +27,6 @@
   ],
   "dishes": [
     {
-      "name": "Pan con alioli",
-      "description": "Bread with alioli",
-      "category": "bread",
-      "price": "6",
-      "id": 3
-    },
-    {
       "name": "Pan de ajo",
       "description": "Grilled bread with garlic oil",
       "category": "bread",
@@ -239,28 +232,28 @@
   ],
   "booking": [
     {
-      "data": "2022-08-04",
-      "time": "12:32",
-      "number": "2",
-      "id": "id0"
-    },
-    {
       "data": "2222-12-12",
       "time": "22:02",
       "number": "2",
       "id": "id10"
     },
     {
-      "data": "2022-08-30",
-      "time": "23:20",
-      "number": "4",
-      "id": "id1"
-    },
-    {
-      "data": "2022-08-30",
-      "time": "14:35",
+      "data": "2022-08-31",
+      "time": "18:00",
       "number": "2",
       "id": "id2"
+    },
+    {
+      "data": "2022-08-31",
+      "time": "18:00",
+      "number": "6",
+      "id": "id6"
+    },
+    {
+      "data": "2022-08-13",
+      "time": "12:03",
+      "number": "2",
+      "id": "id0"
     }
   ]
 }
