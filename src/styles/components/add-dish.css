@@ -1,0 +1,35 @@
+.add-container {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.add__inp {
+  width: 50%;
+  margin: 30px 0;
+  height: 40px;
+  border: none;
+  font-family: "Aboreto", cursive;
+  border-bottom: 1px solid black;
+  padding-left: 10px;
+}
+
+.add__inp:focus {
+  border: none;
+  outline: 1px solid black;
+}
+
+.add__btn {
+  width: 30%;
+  height: 40px;
+  background-color: transparent;
+  transition: 1s;
+  font-family: "Aboreto", cursive;
+  border: 1px solid black;
+}
+
+.add__btn:hover {
+  transition: 1s;
+  color: white;
+  background-color: #000;
+}

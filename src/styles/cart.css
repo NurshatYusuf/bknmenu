@@ -1,0 +1,16 @@
+.cart__btn {
+  width: 100px;
+  height: 40px;
+  background-color: transparent;
+  transition: 1s;
+  font-family: "Aboreto", cursive;
+  font-size: 12px;
+  color: black;
+  border: none;
+}
+
+.cart__btn:hover {
+  background-color: #000;
+  color: white;
+  transition: 1s;
+}

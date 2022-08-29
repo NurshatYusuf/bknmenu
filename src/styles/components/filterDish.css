@@ -1,0 +1,25 @@
+.fil__block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30%;
+}
+
+.fil__block:focus {
+  background-color: #000;
+  color: #fff;
+}
+
+.fil__block:nth-child(2) + label {
+  width: 10%;
+}
+
+.fil__inp {
+  margin-right: 10px;
+}
+/* 
+.fil__inp:focus + label {
+  background-color: #000;
+  color: #fff;
+} */
